@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Home from './pages/Home';
 import Stats from './pages/Stats';
 import Features from './pages/Features';
+import Brands from './pages/Brands';
+import OurWork from './pages/OurWork';
 import './App.css';
 
 function App() {
@@ -20,13 +22,13 @@ function App() {
     <Router>
       <div>
         <nav className="glassy-navbar">
-          <div className="navbar-logo">VibeCoding</div>
+          <div className="navbar-logo">FrontCodex</div>
           <ul className="navbar-links">
             <li><Link to="/">Home</Link></li>
             <li><Link to="/features">Features</Link></li>
             <li><Link to="/stats">Stats</Link></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><Link to="/brands">Brands</Link></li>
+            <li><Link to="/ourwork">Our Work</Link></li>
           </ul>
           <button
             className="toggle-btn"
@@ -45,6 +47,8 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/features" element={<Features />} />
             <Route path="/stats" element={<Stats />} />
+            <Route path="/brands" element={<Brands />} />
+            <Route path="/ourwork" element={<OurWork />} />
           </Routes>
         </main>
       </div>
